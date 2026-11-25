@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Made with HIGH5 — Human Initiative, Generatively Honed">
+  <defs>
+    <path id="ring" d="M120,120 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB547"/>
+      <stop offset="1" stop-color="#FF6B4A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="116" fill="#0E1726"/>
+  <circle cx="120" cy="120" r="110" fill="none" stroke="url(#g)" stroke-width="3"/>
+  <circle cx="120" cy="120" r="66" fill="none" stroke="#2A3850" stroke-width="1.5"/>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#E9EEF6">
+    <textPath href="#ring" startOffset="0" textLength="545" lengthAdjust="spacing">MADE WITH HIGH5 · HUMAN INITIATIVE · GENERATIVELY HONED ·</textPath>
+  </text>
+  <text x="120" y="135" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="50" font-weight="800" fill="#FFFFFF" letter-spacing="-1">H<tspan fill="url(#g)">5</tspan></text>
+  <text x="120" y="158" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2.5" fill="#9FB0C8">HUMAN-LED</text>
+</svg>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Made with HIGH5 — Human Initiative, Generatively Honed</title>
+<meta name="description" content="HIGH5 is a badge for content created by people, with AI. Human Initiative, Generatively Honed. Show your audience that a human led the work.">
+<meta property="og:title" content="Made with HIGH5">
+<meta property="og:description" content="A badge for content created by people, with AI. Human Initiative, Generatively Honed.">
+<meta property="og:url" content="https://madewithhigh5.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://madewithhigh5.com/badge.svg">
+<link rel="icon" href="badge.svg" type="image/svg+xml">
+<link rel="canonical" href="https://madewithhigh5.com/">
+<style>
+  :root{
+    --ink:#0E1726; --ink-2:#16213A; --line:#2A3850; --text:#E9EEF6; --muted:#9FB0C8;
+    --a1:#FFB547; --a2:#FF6B4A;
+    --grad:linear-gradient(135deg,var(--a1),var(--a2));
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--ink);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;text-decoration:none}
+  .logo img{width:34px;height:34px}
+  .logo span b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .pill{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);background:var(--grad);padding:6px 12px;border-radius:999px}
+
+  .hero{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center;padding:56px 0 88px}
+  h1{font-size:clamp(40px,6vw,68px);line-height:1.04;letter-spacing:-1.5px;font-weight:800}
+  h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-size:clamp(17px,2vw,20px);color:var(--muted);margin:22px 0 32px;max-width:560px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid transparent;cursor:pointer}
+  .btn-primary{background:var(--grad);color:var(--ink)}
+  .btn-ghost{border-color:var(--line);color:var(--text);background:transparent}
+  .btn:hover{transform:translateY(-1px)}
+  .badge-hero{position:relative;justify-self:center}
+  .badge-hero img{width:min(340px,80vw);height:auto;filter:drop-shadow(0 30px 60px rgba(255,107,74,.25));animation:spin 60s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){.badge-hero img{animation:none}}
+
+  section{padding:80px 0;border-top:1px solid var(--line)}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--a1);margin-bottom:12px}
+  h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.8px;line-height:1.15;margin-bottom:16px;font-weight:800}
+  .sub{color:var(--muted);max-width:640px;font-size:17px}
+
+  .acronym{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+  .letter{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .letter .big{font-size:44px;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .letter h3{font-size:17px;margin:12px 0 6px}
+  .letter p{color:var(--muted);font-size:14.5px}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;counter-reset:s}
+  .step{padding:26px;border-radius:16px;border:1px solid var(--line);position:relative}
+  .step::before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:13px;letter-spacing:2px;color:var(--a2)}
+  .step h3{font-size:19px;margin:10px 0 8px}
+  .step p{color:var(--muted);font-size:15px}
+
+  .use{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-top:36px;background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:32px}
+  .use img{width:140px;height:140px}
+  pre{background:#08101C;border:1px solid var(--line);border-radius:12px;padding:16px;overflow-x:auto;font-size:13px;color:#CFE0FF;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;word-break:break-all}
+  .copy-row{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+  .note{color:var(--muted);font-size:13px}
+
+  .pledge{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+  .pledge li{padding:16px 18px 16px 48px;border:1px solid var(--line);border-radius:12px;position:relative;color:var(--text)}
+  .pledge li::before{content:"";position:absolute;left:18px;top:21px;width:14px;height:14px;border-radius:50%;background:var(--grad)}
+
+  .soon{text-align:center}
+  .soon .sub{margin:0 auto 28px}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:var(--text)}
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;gap:36px;padding-top:28px;text-align:left}
+    .badge-hero{order:-1}
+    .badge-hero img{width:220px}
+    .acronym{grid-template-columns:1fr 1fr}
+    .steps,.pledge{grid-template-columns:1fr}
+    .use{grid-template-columns:1fr;text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/"><img src="badge.svg" alt=""><span>MADE WITH <b>HIGH5</b></span></a>
+    <span class="pill">Launching soon</span>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>People lead.<br>AI helps.<br><em>Say so.</em></h1>
+      <p class="lede">HIGH5 is a simple badge for content created by people, with AI. It tells your audience that a human started the work, steered it and signed it off. AI helped shape it.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#badge">Get the badge</a>
+        <a class="btn btn-ghost" href="#what">What HIGH5 means</a>
+      </div>
+    </div>
+    <div class="badge-hero"><img src="badge.svg" alt="The Made with HIGH5 badge"></div>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <p class="eyebrow">The mark</p>
+    <h2>HIGH = Human Initiative, Generatively Honed</h2>
+    <p class="sub">A high five takes two hands. One is yours, one is the machine's, and yours comes first.</p>
+    <div class="acronym">
+      <div class="letter"><div class="big">H</div><h3>Human</h3><p>A real person owns the idea, the brief and the final word.</p></div>
+      <div class="letter"><div class="big">I</div><h3>Initiative</h3><p>The work starts with human intent, not a blank prompt left to run.</p></div>
+      <div class="letter"><div class="big">G</div><h3>Generatively</h3><p>AI tools draft, explore, edit and speed up the making.</p></div>
+      <div class="letter"><div class="big">H</div><h3>Honed</h3><p>The person reviews, corrects and refines until it's right.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Three steps to a HIGH5 piece</h2>
+    <div class="steps">
+      <div class="step"><h3>You initiate</h3><p>Set the purpose, audience and facts. Decide what the piece must say.</p></div>
+      <div class="step"><h3>AI generates</h3><p>Use AI to draft, design, summarise or translate, under your direction.</p></div>
+      <div class="step"><h3>You hone and sign</h3><p>Check it, fix it, make it yours. Then add the HIGH5 badge.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="badge">
+  <div class="wrap">
+    <p class="eyebrow">Use the badge</p>
+    <h2>Add HIGH5 to your work</h2>
+    <p class="sub">Put the badge on documents, articles, posts, slides and videos where a person led and AI helped. It's free to use.</p>
+    <div class="use">
+      <img src="badge.svg" alt="HIGH5 badge preview">
+      <div>
+        <pre id="snippet">&lt;a href="https://madewithhigh5.com" title="Made with HIGH5 — Human Initiative, Generatively Honed"&gt;&lt;img src="https://madewithhigh5.com/badge.svg" alt="Made with HIGH5" width="96" height="96"&gt;&lt;/a&gt;</pre>
+        <div class="copy-row">
+          <button class="btn btn-primary" id="copy" type="button">Copy embed code</button>
+          <a class="btn btn-ghost" href="badge.svg" download="made-with-high5-badge.svg">Download SVG</a>
+          <span class="note" id="copied" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+
+    <ul class="pledge">
+      <li>A person decided what the piece is for.</li>
+      <li>A person checked the facts and claims.</li>
+      <li>A person edited the AI output, not just accepted it.</li>
+      <li>A person is accountable for what's published.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="soon">
+  <div class="wrap">
+    <p class="eyebrow">Coming soon</p>
+    <h2>The full HIGH5 site is on its way</h2>
+    <p class="sub">Guidelines, badge variants for print and video, and a gallery of work made with HIGH5. Until then, start using the badge and show people how you work.</p>
+    <a class="btn btn-primary" href="#badge">Get the badge</a>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>© <span id="yr">2026</span> Made with HIGH5</span>
+    <span>An initiative by <a href="https://damionlock.com">Damion Lock</a></span>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('copy').addEventListener('click', function () {
+    var text = document.getElementById('snippet').textContent;
+    var done = function () { document.getElementById('copied').textContent = 'Copied'; };
+    if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done, done); }
+    else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove(); done(); }
+  });
+</script>
+</body>
+</html>
